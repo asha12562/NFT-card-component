@@ -1,0 +1,124 @@
+:root {
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+--background-blue: hsl(217, 54%, 11%);
+--card-bg-blue: hsl(216, 50%, 16%);
+--line-blue: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--background-blue);
+}
+
+.card {
+    background-color: var(--card-bg-blue);
+    max-width: 22rem;
+    border-radius: 1rem;
+}
+
+.image {
+    opacity: 1;
+    margin: 1.5rem;
+    max-width: 19rem;
+    border-radius: 0.5rem;
+    transition: .5s ease-out;
+    backface-visibility: hidden;
+}
+
+.view-icon {
+    transition: .5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 38.5%;
+    left: 50%;
+    border-radius: 0.5rem;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.image-container:hover .image {
+    opacity: 0.3;
+}
+
+.image-container:hover .view-icon {
+    opacity: 1;
+}
+
+.title {
+    margin: 0 1.5rem;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.title:hover{
+    color: var(--cyan);
+}
+
+.details {
+    color: var(--soft-blue);
+    margin: 1rem 1.5rem 0 1.5rem;
+    line-height: 1.5rem;
+    font-weight: 300;
+}
+
+.icon-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-content: center;
+    margin: 0 1.5rem;
+    border-bottom: 0.1rem solid var(--line-blue);
+}
+
+.price {
+    color: var(--cyan);
+    font-weight: 600;
+}
+
+.price::before {
+    content: url("/images/icon-ethereum.svg");
+    margin: 0 0.5rem 0 0;
+}
+
+.time {
+    color: var(--soft-blue);
+    text-align: right;
+}
+
+.time::before {
+    content: url(/images/icon-clock.svg);
+    margin: 0 0.5rem;
+}
+
+.footer {
+    margin: 0 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.profile {
+    margin: 1rem;
+    max-width: 2rem;
+    border-radius: 50%;
+    border: 0.1rem solid var(--white);
+}
+
+.author{
+    color: var(--soft-blue);
+    font-weight: 400;
+}
+
+.name {
+    color: var(--white);
+}
+
+.name:hover {
+    color: var(--cyan);
+}
